@@ -18,7 +18,8 @@
     <form method="post" action="/client/check">
         @csrf
 
-        @if(session()->get('mesg') != "")
+        @if(session()->get('mesg') != "
+")
             <h2> {{ session()->get('mesg') }} </h2>
         @endif
         <h1>Форма заявления</h1>

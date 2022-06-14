@@ -4,6 +4,6 @@
     Главная страница
 @endsection
 @section("dynamicContent")
-    <input type="text" name="conf" value=""/>
-    <input type="submit" name="btnConf" value="Подтвердить"/>
+<div class="c">
+</div>
 @endsection

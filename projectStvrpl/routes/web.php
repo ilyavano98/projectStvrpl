@@ -18,6 +18,7 @@ Route::get('/', "App\Http\Controllers\MainController@home");
 Route::get('/client', "App\Http\Controllers\MainController@client")->name("client");
 
 Route::get('/manager', "App\Http\Controllers\MainController@manager");
+Route::get('/manager/{id}', "App\Http\Controllers\MainController@managerContent");
 
 Route::post('/client/check', "App\Http\Controllers\MainController@client_check");
 

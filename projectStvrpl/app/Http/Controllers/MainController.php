@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\ContactModel;
 use Illuminate\Http\Request;
-use function PHPUnit\Framework\returnValueMap;
+
 
 class MainController extends Controller
 {
@@ -20,8 +20,15 @@ class MainController extends Controller
 
     public function manager()
     {
-        $list_notes = new ContactModel();
-        return view("manager", ["list_note"=> $list_notes->all()]);
+        $list_note = new ContactModel();
+        return view("manager", ["list_note"=> $list_note->all()]);
+    }
+
+    public function managerContent($id)
+    {
+        $list_note = ContactModel::find($id);
+//        dd($list_note);
+        return view("content", ["list_note"=>$list_note]);
     }
 
     public function client_check(Request $request)
